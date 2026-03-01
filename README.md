@@ -31,37 +31,6 @@ It works **only for a fixed, curated list of foods** to ensure stable demo resul
 
 ---
 
-## 🧠 Supported Food Classes
-
-The model and nutrition database are aligned for **common, visually distinct foods**.
-
-### 🍎 Fruits
-- Apple  
-- Banana  
-- Mango  
-- Orange  
-- Strawberry  
-- Pineapple  
-- Pomegranate  
-
-### 🍽️ Indian & Common Foods
-- Samosa  
-- Paneer  
-- Egg  
-- Roti  
-- Rice  
-- Dal  
-- Rajma  
-- Salad  
-- Burger  
-- Pizza  
-- Maggie (Instant Noodles)  
-- Soya Chunks  
-
-👉 Any food **outside this list** may be shown as **“Unsupported Food”**.
-
----
-
 ## 🗂️ Project Structure
 
 ```text
