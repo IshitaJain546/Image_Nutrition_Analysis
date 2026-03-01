@@ -23,54 +23,6 @@ Shows alternative predictions (if applicable)
 ⚠️ This is not a general-purpose food recognizer.
 It works only for a fixed, curated list of foods chosen to give stable demo results.
 
-🧠 Supported Food Classes (Current)
-
-The model and nutrition database are aligned for strong, common, visually distinct foods:
-
-🍎 Fruits
-
-Apple
-
-Banana
-
-Mango
-
-Orange
-
-Strawberry
-
-Pineapple
-
-Pomegranate
-
-🍽️ Indian & Common Foods
-
-Samosa
-
-Paneer
-
-Egg
-
-Roti
-
-Rice
-
-Dal
-
-Rajma
-
-Salad
-
-Burger
-
-Pizza
-
-Maggie (Instant Noodles)
-
-Soya Chunks
-
-👉 Any food outside this list may show as “Unsupported Food”.
-
 🗂️ Project Structure (Actual)
 files/
 ├── app.py                  # Flask backend (main server)
