@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FoodLens – AI Nutrition Analyzer</title>
+
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">
+      <span class="logo-icon">🍽️</span>
+      <span class="logo-text">FoodLens</span>
+    </div>
+    <p class="tagline">AI-Powered Food Recognition & Nutrition Analysis</p>
+  </div>
+</header>
+
+<!-- Main -->
+<main class="main">
+
+  <!-- Upload Card -->
+  <section class="card upload-card">
+    <h2 class="card-title">Upload a Food Image</h2>
+    <p class="card-subtitle">Our AI will identify the food and show detailed nutrition info</p>
+
+    <!-- Dropzone -->
+    <div class="dropzone" id="dropzone">
+      <div id="dropzoneDefault">
+        <div class="dropzone-icon">📷</div>
+        <p class="dropzone-text">Drag & drop your image here</p>
+        <p class="dropzone-sub">or</p>
+
+        <!-- IMPORTANT: BUTTON, NOT LABEL -->
+        <button type="button" class="btn btn-primary" id="uploadBtn">
+          Choose Image
+        </button>
+
+        <!-- Hidden input -->
+        <input type="file" id="fileInput" accept="image/*" hidden />
+      </div>
+
+      <!-- Preview -->
+      <div class="preview-wrapper" id="previewWrapper" style="display:none;">
+        <img id="previewImg" class="preview-img" />
+        <button class="btn btn-ghost remove-btn" id="removeBtn">✕ Remove</button>
+      </div>
+    </div>
+
+    <button class="btn btn-success" id="analyzeBtn" disabled>
+      🔍 Analyze Food
+    </button>
+
+    <div class="loader" id="loader" style="display:none;">
+      <div class="spinner"></div>
+      <p>Analyzing your food...</p>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section class="card" id="resultsCard" style="display:none;">
+    <div class="result-header">
+      <span class="result-icon">✅</span>
+      <div>
+        <h2 id="resultFoodName"></h2>
+        <p id="resultConfidence"></p>
+      </div>
+    </div>
+
+    <div class="nutrition-grid">
+      <div class="nutrition-card calories">
+        <div class="nutrition-value" id="valCalories"></div>
+        <div class="nutrition-label">Calories</div>
+        <div class="nutrition-unit">kcal</div>
+      </div>
+      <div class="nutrition-card protein">
+        <div class="nutrition-value" id="valProtein"></div>
+        <div class="nutrition-label">Protein</div>
+        <div class="nutrition-unit">grams</div>
+      </div>
+      <div class="nutrition-card fat">
+        <div class="nutrition-value" id="valFat"></div>
+        <div class="nutrition-label">Fat</div>
+        <div class="nutrition-unit">grams</div>
+      </div>
+      <div class="nutrition-card carbs">
+        <div class="nutrition-value" id="valCarbs"></div>
+        <div class="nutrition-label">Carbs</div>
+        <div class="nutrition-unit">grams</div>
+      </div>
+      <div class="nutrition-card fiber">
+        <div class="nutrition-value" id="valFiber"></div>
+        <div class="nutrition-label">Fiber</div>
+        <div class="nutrition-unit">grams</div>
+      </div>
+    </div>
+
+    <div class="other-predictions">
+      <h3>Other Possibilities</h3>
+      <ul id="otherPredictions"></ul>
+    </div>
+
+    <button class="btn btn-primary try-again-btn" id="tryAgainBtn">
+      🔄 Try Another Image
+    </button>
+  </section>
+
+  <div class="error-banner" id="errorBanner" style="display:none;">
+    <span>⚠️</span>
+    <p id="errorMsg"></p>
+  </div>
+<p class="nutrition-note">
+  Nutrition values are approximate per 100 grams
+</p>
+</main>
+
+<footer class="footer">
+  <p>AI-Based Image Food Recognition · Academic Project</p>
+</footer>
+
+<script src="/static/js/app.js"></script>
+</body>
+</html>
